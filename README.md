@@ -10,7 +10,13 @@ $ composer require faustbrian/gdax-php-client
 
 ## Usage
 
-...
+```php
+<?php
+
+$client = new BrianFaust\GDAX\Client('key', 'secret', 'passphrase');
+
+dump($client->api('Accounts')->all());
+```
 
 ## Testing
 
