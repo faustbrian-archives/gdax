@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace BrianFaust\GDAX\API;
 
 use BrianFaust\Http\Http;
+use BrianFaust\Http\PendingHttpRequest;
 
 abstract class AbstractAPI
 {
@@ -86,7 +87,16 @@ abstract class AbstractAPI
         return $this->getHttpClient('DELETE', $path, $params)->delete($path, $params)->json();
     }
 
-    private function getHttpClient(string $method, string $path, array $params = [])
+    /**
+     * Create a new HTTP Client instance.
+     *
+     * @param  string $method
+     * @param  string $path
+     * @param  array  $params
+     *
+     * @return PendingHttpRequest
+     */
+    private function getHttpClient(string $method, string $path, array $params = []): PendingHttpRequest
     {
         return Http::withBaseUri('https://api.gdax.com/')->withHeaders([
             'CB-ACCESS-KEY'        => $this->key,
@@ -96,6 +106,16 @@ abstract class AbstractAPI
         ]);
     }
 
+    /**
+     * Generate the base64-encoded signature.
+     *
+     * @param  int    $timestamp
+     * @param  string $method
+     * @param  string $path
+     * @param  array  $params
+     *
+     * @return string
+     */
     private function signature(int $timestamp, string $method, string $path, array $params): string
     {
         $value = $timestamp.$method.'/'.$path;
