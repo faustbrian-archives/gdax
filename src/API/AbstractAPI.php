@@ -90,9 +90,9 @@ abstract class AbstractAPI
     /**
      * Create a new HTTP Client instance.
      *
-     * @param  string $method
-     * @param  string $path
-     * @param  array  $params
+     * @param string $method
+     * @param string $path
+     * @param array  $params
      *
      * @return PendingHttpRequest
      */
@@ -109,10 +109,10 @@ abstract class AbstractAPI
     /**
      * Generate the base64-encoded signature.
      *
-     * @param  int    $timestamp
-     * @param  string $method
-     * @param  string $path
-     * @param  array  $params
+     * @param int    $timestamp
+     * @param string $method
+     * @param string $path
+     * @param array  $params
      *
      * @return string
      */
