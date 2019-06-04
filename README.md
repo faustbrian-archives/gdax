@@ -1,16 +1,16 @@
 # GDAX PHP Client
 
-[![Build Status](https://img.shields.io/travis/faustbrian/GDAX-PHP-Client/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/GDAX-PHP-Client)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/gdax-php-client.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/GDAX-PHP-Client.svg?style=flat-square)](https://github.com/faustbrian/GDAX-PHP-Client/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/GDAX-PHP-Client.svg?style=flat-square)](https://packagist.org/packages/faustbrian/GDAX-PHP-Client)
+[![Build Status](https://img.shields.io/travis/plients/GDAX-PHP-Client/master.svg?style=flat-square)](https://travis-ci.org/plients/GDAX-PHP-Client)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/plients/gdax.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/plients/GDAX-PHP-Client.svg?style=flat-square)](https://github.com/plients/GDAX-PHP-Client/releases)
+[![License](https://img.shields.io/packagist/l/plients/GDAX-PHP-Client.svg?style=flat-square)](https://packagist.org/packages/plients/GDAX-PHP-Client)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/gdax-php-client
+$ composer require plients/gdax
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ $ composer require faustbrian/gdax-php-client
 ```php
 <?php
 
-$client = new BrianFaust\GDAX\Client('key', 'secret', 'passphrase');
+$client = new Plients\GDAX\Client('key', 'secret', 'passphrase');
 
 dump($client->api('Accounts')->all());
 ```
@@ -31,7 +31,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -40,4 +40,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

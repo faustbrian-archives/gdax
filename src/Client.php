@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of GDAX PHP Client.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\GDAX;
+namespace Plients\GDAX;
 
 class Client
 {
@@ -53,7 +53,7 @@ class Client
      */
     public function api(string $name): API\AbstractAPI
     {
-        $class = "BrianFaust\\GDAX\\API\\{$name}";
+        $class = "Plients\\GDAX\\API\\{$name}";
 
         return new $class($this->key, $this->secret, $this->passphrase);
     }

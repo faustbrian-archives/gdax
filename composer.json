@@ -1,13 +1,19 @@
 {
-    "name": "faustbrian/gdax-php-client",
+    "name": "plients/gdax",
     "description": "A GDAX Client for PHP",
-    "keywords": ["api", "http", "gdax"],
+    "keywords": [
+        "api",
+        "http",
+        "gdax"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
         "php": "^7.1",
         "faustbrian/http": "^1.0"
@@ -18,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\GDAX\\": "src"
+            "Plients\\GDAX\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\GDAX\\": "tests"
+            "Plients\\Tests\\GDAX\\": "tests"
         }
     },
     "config": {
